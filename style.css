@@ -1,0 +1,106 @@
+:root{
+    --dark:#1E140D;
+    --dark2:#2A1D12;
+    --cream:#F2E9DA;
+    --leather:#8B4A2B;
+    --stitch:#E08A3E;
+    --text-light:#F5EEE1;
+    --text-dark:#241811;
+    --muted:#B79D82;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:70px;}
+  body{font-family:'Work Sans',sans-serif;background:var(--cream);color:var(--text-dark);line-height:1.5;}
+  h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.01em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .stitch-divider{height:1px;background-image:repeating-linear-gradient(90deg,var(--stitch) 0 10px,transparent 10px 20px);opacity:.6;}
+
+  nav{position:sticky;top:0;z-index:20;background:var(--dark);padding:14px 0;padding-top:calc(14px + env(safe-area-inset-top,0px));border-bottom:1px solid #ffffff1a;}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;}
+  .brand{color:var(--text-light);font-family:'Oswald';font-size:1.2rem;font-weight:700;letter-spacing:.02em;}
+  .brand span{color:var(--stitch);}
+  nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap;}
+  nav a{color:var(--muted);text-decoration:none;font-size:.92rem;}
+  nav a:hover,nav a:focus-visible{color:var(--text-light);}
+
+  header.hero{position:relative;color:var(--text-light);overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;z-index:0;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:saturate(1.05);}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,13,8,.55) 0%,rgba(20,13,8,.72) 55%,var(--dark) 100%);}
+  .hero-content{position:relative;z-index:2;padding:96px 24px 64px;max-width:640px;}
+  .hero-tag{display:inline-block;font-size:.82rem;color:var(--stitch);border:1px dashed #ffffff4d;padding:5px 12px;border-radius:2px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.05;margin-bottom:18px;text-shadow:0 2px 14px rgba(0,0,0,.4);}
+  .hero p{color:var(--muted);font-size:1.08rem;max-width:46ch;margin-bottom:28px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:13px 26px;border-radius:2px;font-weight:600;text-decoration:none;font-size:.95rem;border:1px solid transparent;}
+  .btn-primary{background:var(--stitch);color:var(--dark);}
+  .btn-primary:hover{background:#ef9a52;}
+  .btn-outline{border-color:#ffffff3d;color:var(--text-light);}
+  .btn-outline:hover{border-color:var(--stitch);color:var(--stitch);}
+  .hero-stats{position:relative;z-index:2;background:var(--dark);border-top:1px solid #ffffff1a;}
+  .hero-stats-row{display:flex;gap:0;padding:22px 24px;}
+  .hero-stats-row .stat{flex:1;text-align:center;border-left:1px dashed #ffffff26;}
+  .hero-stats-row .stat:first-child{border-left:none;}
+
+  section{padding:72px 0;}
+  .alt{background:var(--dark);color:var(--text-light);}
+  .alt .muted-text{color:var(--muted);}
+  .eyebrow{display:none;}
+  h2.h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:10px;}
+  .lede{max-width:60ch;color:#6b5745;margin-bottom:38px;}
+  .alt .lede{color:var(--muted);}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+  .stat-row{display:flex;gap:34px;margin-top:28px;flex-wrap:wrap;}
+  .stat b{font-family:'Oswald';font-size:1.9rem;display:block;color:var(--stitch);}
+  .stat span{font-size:.85rem;color:var(--muted);}
+
+  .catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .cat-card{background:var(--dark);border-radius:3px;overflow:hidden;}
+  .swatch{height:130px;position:relative;background-image:repeating-linear-gradient(45deg,var(--tc,#5c3319) 0 14px,var(--tc2,#4a2812) 14px 28px);}
+  .swatch::after{content:"";position:absolute;inset:10px;border:1px dashed rgba(255,255,255,.35);border-radius:4px;}
+  .swatch-img{height:180px;width:100%;object-fit:cover;display:block;}
+  .cat-body{padding:16px 18px;color:var(--text-light);}
+  .cat-body h3{font-size:1.02rem;margin-bottom:4px;}
+  .cat-body p{font-size:.85rem;color:var(--muted);}
+
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .price-card{border:1px solid #d8c8ae;border-radius:3px;padding:26px 22px;background:#fffdf9;}
+  .price-card.feat{border-color:var(--stitch);border-width:2px;position:relative;}
+  .price-card h3{font-size:1.1rem;margin-bottom:6px;}
+  .price-card .price{font-family:'Oswald';font-size:1.5rem;color:var(--leather);margin:10px 0 14px;}
+  .price-card ul{padding-left:18px;font-size:.88rem;color:#4a3a2c;}
+  .price-card li{margin-bottom:6px;}
+  .price-note{margin-top:20px;font-size:.85rem;color:#6b5745;}
+
+  .mat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+  .mat-item{padding:20px 0;border-top:1px solid #ffffff26;}
+  .mat-item h3{font-size:1.02rem;color:var(--stitch);margin-bottom:6px;}
+  .mat-item p{font-size:.88rem;color:var(--muted);}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+  .info-line{display:flex;gap:12px;margin-bottom:16px;font-size:.95rem;}
+  .info-line b{min-width:92px;display:inline-block;color:var(--leather);}
+  .map-box{border-radius:3px;overflow:hidden;border:1px solid #d8c8ae;background:#e6dcc7;}
+  .map-box iframe{width:100%;height:280px;border:0;display:block;}
+  .map-fallback{padding:14px 16px;font-size:.85rem;background:#fffdf9;}
+
+  footer{background:var(--dark2);color:var(--muted);text-align:center;padding:26px 0;font-size:.82rem;}
+  footer strong{color:var(--text-light);}
+
+  @media(max-width:820px){
+    .hero-content{padding:64px 20px 48px;}
+    .hero-stats-row{flex-wrap:wrap;}
+    .hero-stats-row .stat{flex:1 1 45%;margin-bottom:14px;}
+    .grid-2{grid-template-columns:1fr;}
+    .price-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    nav ul{display:none;}
+  }
+
+/* Link navigasi aktif */
+nav a.active{color:var(--stitch);}
